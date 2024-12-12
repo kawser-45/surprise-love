@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+
+:root {
+  --title-font: "Agu Display", sans-serif;
+}
+
+h1,
+h3,
+h4 {
+  font-family: var(--title-font);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Ensure content stacks vertically */
+  min-height: 100vh; /* Allow the body to take full screen height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8, #fff);
+}
+
+.button-container {
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: 75px;
+  color: green;
+}
+
+.love-button {
+  background: linear-gradient(90deg, #ff6a88, #ffac);
+  color: white;
+  font-size: 20px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.love-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.love-message {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fc0000;
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
+h3 {
+  font-size: 45px;
+}
+
+button {
+  font-size: 24px;
+  padding: 20px 30px;
+  margin: 10px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.container #colorBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+  border: dotted grey;
+}
+
+#colorCode {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#copyButton {
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#copyButton:hover {
+  background-color: rgba(1, 93, 1, 0.76);
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for mobile screens */
+    flex-direction: column;
+    padding-bottom: 30px; /* Ensure space for bottom buttons */
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 40px; /* Smaller font size for mobile */
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 30px; /* Adjust font size for mobile */
+    margin-bottom: 15px;
+  }
+
+  .love-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    width: 100%; /* Make button full width on mobile */
+    margin-top: 15px;
+  }
+
+  .love-message {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  #colorBox {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto; /* Center the color box */
+  }
+
+  #colorCode {
+    font-size: 20px; /* Adjust font size for color code */
+  }
+
+  #copyButton {
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%; /* Make the copy button full width */
+    margin-top: 15px;
+  }
+
+  /* Stack elements vertically */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container button {
+    width: 100%; /* Make buttons take up full width */
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 35px; /* Even smaller for small screens */
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .love-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .love-message {
+    font-size: 18px;
+  }
+
+  #colorBox {
+    width: 130px;
+    height: 130px;
+  }
+
+  #copyButton {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
